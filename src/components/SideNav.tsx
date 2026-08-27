@@ -77,7 +77,7 @@ export default function SideNav() {
               <Text className="mb-4">Storage Used</Text>
               <Progress value={50} />
             </Card.Section>
-            <Button color="blue" fullWidth size="lg" mt="md" radius="md">
+            <Button color="#aa3bff" fullWidth size="lg" mt="md" radius="md">
               Upgrade Plan
             </Button>
           </Card>
