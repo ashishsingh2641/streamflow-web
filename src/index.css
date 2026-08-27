@@ -103,6 +103,15 @@
   --btn-gradient-end: #894cff;
   --btn-text: #ffffff;
 
+    --page-bg: #f6f7fa;
+  --text-primary: #101114;
+  --text-secondary: #667085;
+
+  --sidebar-bg: #07111e;
+  --sidebar-card-bg: #111b2a;
+  --sidebar-text: #f5f5f7;
+  --sidebar-text-secondary: #b8bfcc;
+
   /* Composite button gradient helper */
   --btn-gradient: linear-gradient(
     135deg,

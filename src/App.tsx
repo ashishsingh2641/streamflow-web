@@ -7,19 +7,19 @@ function App() {
 
   return (
     <AppShell
-      padding="md"
-      header={{ height: 0 }}
       navbar={{
-        width: 300,
+        width: 260,
         breakpoint: "sm",
-        collapsed: { mobile: !opened },
       }}
+      padding="md"
     >
       <AppShell.Navbar>
         <SideNav />
       </AppShell.Navbar>
 
-      <AppShell.Main>Main</AppShell.Main>
+      <AppShell.Main>
+        Main
+      </AppShell.Main>
     </AppShell>
   );
 }

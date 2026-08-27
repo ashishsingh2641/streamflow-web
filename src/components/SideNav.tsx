@@ -23,61 +23,34 @@ import {
 import "../styles/SideNav.scss";
 
 export default function SideNav() {
+  const navigation = [
+  { label: "Dashboard", path: "/dashboard", icon: HouseIcon },
+  { label: "Videos", path: "/videos", icon: Video },
+  { label: "Live Streams", path: "/live", icon: Radio },
+  { label: "Categories", path: "/categories", icon: CloudUpload },
+  { label: "Playlists", path: "/playlists", icon: ListVideo },
+  { label: "Analytics", path: "/analytics", icon: ChartNoAxesCombined },
+  { label: "Comments", path: "/comments", icon: MessageSquare },
+  { label: "Monetization", path: "/monetization", icon: BadgeDollarSign },
+  { label: "Users", path: "/users", icon: Users },
+  { label: "Settings", path: "/settings", icon: Settings },
+];
   return (
     <Stack h="100%" w="100%" p="md" className="dark-bg side_nav">
       <Image src={logo} alt="Streamflow" fit="contain" />
       <Stack flex={1} justify="space-between">
         <Stack gap="xs">
-          <NavLink
-            href="#required-for-focus"
-            label="Dashboard"
-            leftSection={<HouseIcon size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Videos"
-            leftSection={<Video size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Live Streams"
-            leftSection={<Radio size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Categories"
-            leftSection={<CloudUpload size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Playlists"
-            leftSection={<ListVideo size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Analytics"
-            leftSection={<ChartNoAxesCombined size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Comments"
-            leftSection={<MessageSquare size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Monetization"
-            leftSection={<BadgeDollarSign size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="User"
-            leftSection={<Users size={24} />}
-          />
-          <NavLink
-            href="#required-for-focus"
-            label="Settings"
-            leftSection={<Settings size={24} />}
-          />
+          {navigation.map((item) => {
+            return (
+            <NavLink
+              key={item.label}
+              href={item.path}
+              label={item.label}
+              leftSection={<item.icon size={24} />}
+            />
+          )
+          })}
+         
         </Stack>
 
         <Card shadow="sm" padding="lg" withBorder className="card-dark">
@@ -85,13 +58,10 @@ export default function SideNav() {
             <Text className="mb-4">Storage Used</Text>
             <Progress value={50} color="#8B4DFF" />
           </Card.Section>
-          <Button
-            color="#8B4DFF"
+         <Button
             fullWidth
-            size="lg"
             mt="md"
-            radius="md"
-            className="font-normal text-sm"
+            variant="gradient"
             gradient={{ from: "#6927E8", to: "#894CFF", deg: 90 }}
           >
             Upgrade Plan
