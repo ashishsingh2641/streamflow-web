@@ -42,9 +42,6 @@
   --primary-700: #9125df;
   --primary-soft: #f3e5ff;
   --primary-gradient: linear-gradient(135deg, #c675ff 0%, #aa3bff 100%);
-  
-
-  
 
   /* Dark navigation */
   --nav-bg: #081321;
@@ -94,6 +91,24 @@
   --font-ui:
     "Open Sans Variable", "Open Sans", system-ui, -apple-system,
     BlinkMacSystemFont, sans-serif;
+
+  --page-bg: #07111e;
+  --card-bg: #111b2a;
+  --card-border: #182437;
+  --text-primary: #f5f5f7;
+  --text-secondary: #b8bfcc;
+  --progress-track: #263148;
+  --progress-purple: #8b4dff;
+  --btn-gradient-start: #6927e8;
+  --btn-gradient-end: #894cff;
+  --btn-text: #ffffff;
+
+  /* Composite button gradient helper */
+  --btn-gradient: linear-gradient(
+    135deg,
+    var(--btn-gradient-start),
+    var(--btn-gradient-end)
+  );
 }
 
 html,
