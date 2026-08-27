@@ -7,7 +7,6 @@
     "types": ["vite/client"],
     "allowArbitraryExtensions": true,
     "skipLibCheck": true,
-   
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -16,7 +15,6 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    
 
     /* Linting */
     "noUnusedLocals": true,
@@ -24,9 +22,9 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
 
-     "paths": {
+    "paths": {
       "@/*": ["./src/*"]
-    },
+    }
   },
   "include": ["src"]
 }

@@ -1,11 +1,33 @@
-@import '@fontsource-variable/geist';
-@import '@mantine/core/styles.css';
-@import '@mantine/dates/styles.css';
-@import '@mantine/notifications/styles.css';
-@import '@mantine/nprogress/styles.css';
+/* Mantine overrides Tailwind's reset; Tailwind utilities override components. */
+@layer theme, base, mantine, components, utilities;
+
+@import "@fontsource-variable/open-sans";
+@import "@mantine/core/styles.layer.css";
+@import "@mantine/dates/styles.layer.css";
+@import "@mantine/notifications/styles.layer.css";
+@import "@mantine/nprogress/styles.layer.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Open Sans Variable", "Open Sans", sans-serif;
+  --color-streamflow-50: #fbf5ff;
+  --color-streamflow-100: #f3e5ff;
+  --color-streamflow-200: #e8ccff;
+  --color-streamflow-300: #d7a3ff;
+  --color-streamflow-400: #c675ff;
+  --color-streamflow-500: #b958ff;
+  --color-streamflow-600: #aa3bff;
+  --color-streamflow-700: #9125df;
+  --color-streamflow-800: #761db6;
+  --color-streamflow-900: #611992;
+}
 
 :root {
-  font-family: 'Geist Variable', sans-serif;
+  /* Mantine font overrides */
+  --mantine-font-family: "Open Sans Variable", "Open Sans", sans-serif;
+  --mantine-font-family-headings: "Open Sans Variable", "Open Sans", sans-serif;
+
+  font-family: "Open Sans Variable", "Open Sans", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #111827;
@@ -20,55 +42,58 @@
   --primary-700: #9125df;
   --primary-soft: #f3e5ff;
   --primary-gradient: linear-gradient(135deg, #c675ff 0%, #aa3bff 100%);
+  
+
+  
 
   /* Dark navigation */
   --nav-bg: #081321;
-  --nav-surface: #111D2D;
-  --nav-active: #24224F;
-  --nav-border: #1D2939;
+  --nav-surface: #111d2d;
+  --nav-active: #24224f;
+  --nav-border: #1d2939;
 
   /* Light interface */
-  --page-bg: #F6F7FA;
-  --surface: #FFFFFF;
-  --surface-subtle: #F9FAFC;
-  --border: #E6E9EF;
+  --page-bg: #f6f7fa;
+  --surface: #ffffff;
+  --surface-subtle: #f9fafc;
+  --border: #e6e9ef;
 
   /* Text */
   --text-primary: #101114;
   --text-secondary: #667085;
-  --text-muted: #98A2B3;
-  --text-on-dark: #F8FAFC;
+  --text-muted: #98a2b3;
+  --text-on-dark: #f8fafc;
+  --text-hover: #b58aff;
 
   /* Semantic accents */
-  --blue: #1769FF;
-  --blue-soft: #E8F1FF;
+  --blue: #1769ff;
+  --blue-soft: #e8f1ff;
 
-  --green: #12B76A;
-  --green-soft: #E1F8EF;
+  --green: #12b76a;
+  --green-soft: #e1f8ef;
 
-  --orange: #FF7919;
-  --orange-soft: #FFF0E3;
+  --orange: #ff7919;
+  --orange-soft: #fff0e3;
 
-  --pink: #EC2D78;
-  --pink-soft: #FDE7F0;
+  --pink: #ec2d78;
+  --pink-soft: #fde7f0;
 
-  --danger: #F04438;
-  --warning: #F79009;
+  --danger: #f04438;
+  --warning: #f79009;
 
   /* Chart colors */
   --chart-purple: #aa3bff;
   --chart-purple-fill: rgba(170, 59, 255, 0.12);
 
-   --radius-sm: 8px;
+  --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
 
   --shadow-card:
-    0 1px 2px rgba(16, 24, 40, 0.04),
-    0 4px 14px rgba(16, 24, 40, 0.06);
+    0 1px 2px rgba(16, 24, 40, 0.04), 0 4px 14px rgba(16, 24, 40, 0.06);
   --font-ui:
-    Inter, "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-
+    "Open Sans Variable", "Open Sans", system-ui, -apple-system,
+    BlinkMacSystemFont, sans-serif;
 }
 
 html,

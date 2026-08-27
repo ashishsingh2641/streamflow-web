@@ -1,1 +1,6 @@
-@import url("./index.css");
+/* Global Sass styles belong here. Tailwind and Mantine are loaded by index.css. */
+
+.dark-bg {
+  background-color: var(--nav-bg);
+  color: var(--surface);
+}

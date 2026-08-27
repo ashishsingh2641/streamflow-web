@@ -1,0 +1,27 @@
+.side_nav {
+  .mantine-NavLink-root {
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out;
+    :where([data-mantine-color-scheme="light"]) &.m_f0824112:hover,
+    &[data-mantine-color-scheme="light"]:hover {
+      background-color: var(--nav-active) !important;
+      color: var(--text-hover) !important;
+    }
+    &:active {
+      background-color: var(--nav-active) !important;
+    }
+  }
+  .card-dark {
+    background-color: var(--chart-purple-fill);
+    color: white;
+    border: 1px solid var(--nav-active);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    .mantine-Card-section {
+      padding: 24px;
+    }
+  }
+}
