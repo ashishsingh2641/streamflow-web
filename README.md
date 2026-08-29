@@ -1,32 +1,53 @@
-# React + TypeScript + Vite
+# StreamFlow Web
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+StreamFlow is a web-based video creator platform for managing content, monitoring analytics, using GenAI-assisted workflows, and exploring ad-tech concepts.
 
-Currently, two official plugins are available:
+This repository contains the StreamFlow web frontend. The backend and AI services will be maintained separately.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Current Status
 
-## React Compiler
+Foundation phase:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [x] React, Vite and TypeScript setup
+- [x] Mantine theme and application shell
+- [x] StreamFlow branding and favicon
+- [x] Desktop sidebar navigation
+- [x] TypeScript path aliases
+- [ ] React Router configuration
+- [ ] Redux Toolkit and RTK Query setup
+- [ ] Dashboard implementation
+- [ ] Authentication
+- [ ] Video management
+- [ ] Analytics
+- [ ] GenAI features
+- [ ] Campaign and ad-tech interface
 
-## Expanding the Oxlint configuration
+## Technology Stack
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+- React
+- Vite
+- TypeScript
+- React Router
+- Redux Toolkit
+- RTK Query
+- Mantine
+- Zod
+- Lucide React
+- Recharts
+- Sass
+- Vitest
+- Playwright
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+## Getting Started
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+### Requirements
+
+- Node.js 22 or later
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/ashishsingh2641/streamflow-web.git
+cd streamflow-web
+npm install
